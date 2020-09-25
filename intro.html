@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript HTML Methode getElementByID()</title>
+</head>
+
+<body>
+    <div>
+        <h2>What Can JavaScript Do ?</h2>
+        <p id="exemple1">JavaScript can change HTML content.</p>
+        <button type="button" onclick='document.getElementById("exemple1").innerHTML = "Hello JavaScript!"'>Click Here!</button>
+    </div>
+    <div>
+        <p id="exemple2">JavaScript can change the style of an HTML element.</p>
+        <button type="button" onclick="document.getElementById('exemple2').style.fontSize = '35px'">Click Here</button>
+    </div>
+    <div>
+        <h2>What Can JAvaScript Do ?</h2>
+        <p id="exemple3">JavaScript can Hide HTML element</p>
+        <button type="button" onclick="document.getElementById('exemple3').style.display='none'">Click Here</button>
+    </div>
+    <div>
+        <h2>What can JavaScript Do ?</h2>
+        <p>JavaScript Can show HTML element</p>
+        <p id="exemple4" style="display:none">Hello JavaScript</p>
+        <button type="button" onclick="document.getElementById('exemple4').style.display='block'">Click Here</button>
+    </div>
+
+</body>
+
+</html>
