@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JavaScript Data Types</title>
+</head>
+
+<body>
+    <h2 style="font-family: cursive; color:blue;"> JAvaScript</h2>
+    <div>
+        <p>When adding a number and a string, JavaScript will treat the number as a string.</p>
+        <p id="exemple1" style="font-family: cursive; color:blue;"></p>
+        <script>
+            var x = 16 + "Volvo";
+            document.getElementById("exemple1").innerHTML = x;
+        </script>
+    </div>
+    <div>
+        <p>When adding a string and a number, JavaScript will treat the number as a string.</p>
+        <p id="exemple2" style="font-family: cursive; color:blue;"></p>
+        <script>
+            var x = "Volvo" + 16;
+            document.getElementById("exemple2").innerHTML =
+                x + "<br/>" + "<br/>";
+        </script>
+    </div>
+    <div>
+        <h2 style="font-family: cursive; color:brown;"> JavaScript string </h2>
+        <p>You can use quotes inside a string, as long as they don't match the quotes surrounding the string:</p>
+        <p id="exemple3" style="font-family: cursive; color:brown;"></p>
+        <script>
+            var answer1 = "It's alright";
+            var answer2 = "He is called 'Johnny'";
+            var answer3 = 'He is called "Johnny"';
+            document.getElementById("exemple3").innerHTML =
+                "<ul>" +
+                "<li>" + answer1 + "</li>" +
+                "<li>" + answer2 + "</li>" +
+                "<li>" + answer3 + "</li>" +
+                "</ul>";
+        </script>
+    </div>
+    <div>
+        <h2 style="font-family: cursive; color:cornflowerblue">JAvaScript number</h2>
+        <p> Extra large or extra small numbers can be written with scientific (exponential) notation:</p>
+        <p id="exemple4" style="font-family: cursive; color:cornflowerblue"></p>
+        <script>
+            var y = 123e5; // 12300000
+            var z = 123e-5; // 0,00123
+            document.getElementById("exemple4").innerHTML =
+                y + "<br/>" + z;
+        </script>
+    </div>
+    <div>
+        <h2 style="font-family: cursive; color:darkkhaki"> JavaScript Booleans</h2>
+        <p> Booleans can have two values : true or false :</p>
+        <p id="exemple5" style="font-family: cursive; color:darkkhaki"></p>
+        <script>
+            var A = 5;
+            var B = 5;
+            var C = 6;
+            document.getElementById("exemple5").innerHTML =
+                (A == B) +
+                "<br/>" + (A == C);
+        </script>
+    </div>
+    <div>
+        <h2 style="font-family: cursive; color:darkmagenta">JavaScript Arrays</h2>
+        <p>Array indexes are zero-based, which means the first item is [0] .</p>
+        <p id="exemple6" style="font-family: cursive; color:darkmagenta"></p>
+        <script>
+            var cars = ["Saab", "Volvo", "BMW"];
+            document.getElementById("exemple6").innerHTML = cars[0];
+        </script>
+    </div>
+    <div>
+        <h2>JAvaScript Objects</h2>
+        <p id="exemple7"></p>
+        <script>
+            var person = {
+                firstName: "John",
+                lasName: "Doe",
+                age: 50,
+                eyeColor: "blue"
+            };
+            document.getElementById("exemple7").innerHTML = person.firstName + " is " + person.age + " years old ";
+        </script>
+        <div>
+            <h2 style="font-family: cursive; color:darkorange">JavaScript typeof</h2>
+            <p>The <strong>typeof </strong> returns the type of a variable or an expression.</p>
+            <p id="exemple8" style="font-family: cursive; color:darkorange"></p>
+            <script>
+                var person = {
+                    firstName: "John",
+                    lasName: "Doe",
+                    age: 50,
+                    eyeColor: "blue"
+                };
+                var car;
+                document.getElementById("exemple8").innerHTML =
+                    "<ul>" +
+                    "<li>" + typeof person + "</li>" +
+                    "<li>" + typeof car + "</li>" +
+                    "<li>" + typeof "" + "</li>" +
+                    "<li>" + typeof 5 + "</li>" +
+                    "<li>" + typeof true + "</li>"
+                "</ul>";
+            </script>
+            <div>
+                <h2 style="font-family: cursive; color:darkorchid">JavaScript</h2>
+                <h3>Difference Between Undefined and Null</h3>
+                <p>Undefined and null are equal in value but different in type:</p>
+                <p id="exemple9" style="font-family: cursive; color:darkorchid"></p>
+                <script>
+                    document.getElementById("exemple9").innerHTML =
+                        "<ul>" +
+                        "<li>" + typeof undefined + "</li>" +
+                        "<li>" + typeof null + "</li>" +
+                        "<li>" + (null === undefined) + "</li>" +
+                        "<li>" + (null == undefined) + "</li"
+                    "</ul>";
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
