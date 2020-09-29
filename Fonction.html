@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Function</title>
+</head>
+
+<body>
+    <div>
+        <h2>Function JavaScript</h2>
+        <P>This example calls a function witch perfoms a calculation, and returns the result:
+        </P>
+        <p id="exemple"></p>
+    </div>
+    <script>
+        function myFunction(p1, p2) {
+            return p1 * p2;
+
+        }
+        document.getElementById("exemple").innerHTML = myFunction(5, 6);
+    </script>
+    <div>
+        <p>This example calls a function witch perfoms a calculations, ans returns the result:
+        </p>
+        <p id="exemple1"></p>
+        <script>
+            var x = myFunction(3, 4);
+            document.getElementById("exemple1").innerHTML = x;
+
+            function myFunction(a, b) {
+                return a * b;
+            }
+        </script>
+    </div>
+    <div>
+        <h2>This function convert 77 Fahrenheit to Celcius</h2>
+        <strong><p>Formule : (5 / 9) * (f - 32)</p></strong>
+        <p id="exemple2"> </p>
+        <script>
+            function toCelcius(f) {
+                return (5 / 9) * (f - 32) + "°C";
+            }
+            document.getElementById("exemple2").innerHTML = toCelcius(77);
+        </script>
+    </div>
+    <div>
+        <p> Accessing a function without () will return the function definition instead of the function result :</p>
+        <p id="exemple3"> </p>
+        <script>
+            function toCelcius(f) {
+                return (5 / 9) * (f - 32) + "°C";
+            }
+            document.getElementById("exemple3").innerHTML = toCelcius;
+        </script>
+    </div>
+    <div>
+        <h2>Function use as a Variable Values</h2>
+        <p id="exemple4"></p>
+        <script>
+            document.getElementById("exemple4").innerHTML = "The temperatue " + toCelcius(77) + "°C";
+
+            function toCelcius(fahrenheit) {
+                return (5 / 9) * (fahrenheit - 32);
+            }
+        </script>
+    </div>
+    <div>
+        <h2> Local Variables</h2>
+        <p>Outside myFunction() carName is undefined</p>
+        <p id="exemple5"></p>
+        <p id="exemple6"></p>
+        <script>
+            myFunction();
+
+            function myFunction() {
+                var carName = "Volvo";
+                document.getElementById("exemple5").innerHTML = typeof carName + " " + carName;
+
+            }
+            document.getElementById("exemple6").innerHTML = typeof carName;
+        </script>
+    </div>
+
+</body>
+
+</html>
