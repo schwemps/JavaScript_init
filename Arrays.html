@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Arrays</title>
+</head>
+
+<body>
+    <div>
+        <h2>JavaScript Arrays</h2>
+        <p id="exemple1"></p>
+        <script>
+            var cars = ["Saab", "Volvo", "BMW"];
+            document.getElementById("exemple1").innerHTML = cars;
+        </script>
+    </div>
+    <div>
+        <p>JavaScript array elements are accessed using numeric indexes</p>
+        <p id="exemple2"></p>
+        <script>
+            var cars2 = ["Saab", "Volvo", "BMW"];
+            document.getElementById("exemple2").innerHTML = cars2[0];
+        </script>
+        <div>
+            <p>Changing an Array element</p>
+            <p id="exemple3"></p>
+            <script>
+                var cars3 = ["Saab", "Volvo", "BMW"];
+                cars3[0] = "Opel";
+                document.getElementById("exemple3").innerHTML = cars3;
+            </script>
+        </div>
+        <div>
+            <h2>The length property returns the length of an array.</h2>
+            <p>["Banana", "Orange", "Apple", "Mango"]</p>
+            <p id="exemple4"></p>
+            <h2>Accessing the Last Array element </h2>
+            <p id="exemple5"></p>
+            <script>
+                var fruits = ["Banana", "Orange", "Apple", "Mango"];
+                //Length of an Array
+                document.getElementById("exemple4").innerHTML = fruits.length;
+                // The last Array element
+                document.getElementById("exemple5").innerHTML = fruits[fruits.length - 1];
+            </script>
+        </div>
+        <div>
+            <h2>The best way to loop an array is using a standard for loop</h2>
+            <p id="exemple6"></p>
+            <script>
+                var fruits1, text, flen, i;
+                fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+                flen = fruits1.length;
+                text = "<ul>";
+                for (i = 0; i < flen; i++) {
+                    text += "<li>" + fruits1[i] + "</li>";
+                }
+                text += "</ul>";
+                document.getElementById("exemple6").innerHTML = text;
+            </script>
+        </div>
+        <div>
+            <h2>Array.forEach() calls a function for each array element</h2>
+            <p>Array.forEach() is not supportes in IE 8 or earlier</p>
+            <p id="exemple7"></p>
+            <script>
+                var fruits2, text2;
+                fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+                text2 = "<ul>";
+                fruits2.forEach(myFunction);
+                text2 += "</ul>";
+                document.getElementById("exemple7").innerHTML = text2;
+
+                function myFunction(value) {
+                    text2 += "<li>" + value + "</li>";
+                }
+            </script>
+        </div>
+        <div>
+            <p>The <strong>push</strong> method appends a new element to an array.</p>
+            <button onclick="myFunction1()"> ADD</button>
+            <p id="exemple8"></p>
+            <p id="exemple81"></p>
+            <script>
+                var fruits3 = ["Banana", "Orange", "Apple", "Mango"];
+                document.getElementById("exemple8").innerHTML = fruits3;
+
+                function myFunction1(val) {
+                    fruits3.push("Lemon");
+                    document.getElementById("exemple8").innerHTML = fruits3;
+
+                }
+            </script>
+        </div>
+        <div>
+            <p>The <strong>length</strong> property provides an easy way to append new element to an array without using the <strong>push</strong> method</p>
+            <button onclick="myFunction2()">ADD</button>
+            <p id="exemple9"></p>
+
+            <script>
+                var fruits4 = ["Banana", "Orange", "Apple", "Mango"];
+                document.getElementById("exemple9").innerHTML = fruits4;
+
+                function myFunction2() {
+                    fruits4[fruits4.length] = "Lemon"; //
+                    document.getElementById("exemple9").innerHTML = fruits4;
+
+                }
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>
